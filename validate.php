@@ -1,6 +1,10 @@
 <?php
 SESSION_START();
 
+require './controller/authController.php';
+
+$authCon = new AuthController;
+
 if(isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on')
 {
    $url = "https://";

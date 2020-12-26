@@ -22,28 +22,28 @@
                             <form method="POST" action="" class="needs-validation" >
                             <div class="form-group">
                                     <label for="email">First Name</label>
-                                    <input id="username" type="username" class="form-control" name="username" tabindex="1" required autofocus>
+                                    <input id="fn" type="username" class="form-control" name="fn" tabindex="1" required autofocus>
                                     <div class="invalid-feedback">
                                         Please fill in your username
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="email">Last Name</label>
-                                    <input id="username" type="username" class="form-control" name="username" tabindex="1" required autofocus>
+                                    <input id="ln" type="username" class="form-control" name="ln" tabindex="1" required autofocus>
                                     <div class="invalid-feedback">
                                         Please fill in your username
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="email">Middle Name</label>
-                                    <input id="username" type="username" class="form-control" name="username" tabindex="1" required autofocus>
+                                    <input id="mn" type="username" class="form-control" name="mn" tabindex="1" required autofocus>
                                     <div class="invalid-feedback">
                                         Please fill in your username
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="email">Email Address</label>
-                                    <input id="username" type="username" class="form-control" name="username" tabindex="1" required autofocus>
+                                    <input id="email" type="username" class="form-control" name="email" tabindex="1" required autofocus>
                                     <div class="invalid-feedback">
                                         Please fill in your username
                                     </div>
@@ -71,10 +71,12 @@
                                     if (isset($_POST['username']) && isset($_POST['passwordval']))
                                     {
 
-                                        include './controller/authController.php';
+                                        $val_fn = $_POST['fn'];
+                                        $val_ln =  $_POST['ln'];    
+                                        $val_mn =  $_POST['mn'];      
+                                        $val_email =  $_POST['email'];             
                                         $username = $_POST['username'];
-                                        $password =  $_POST['passwordval'];                                        
-                                        $authCon = new AuthController;
+                                        $password =  $_POST['passwordval'];
                                         $lr = $authCon->loginProcess($username,$password);
                                         if ($lr == "success")
                                         {
