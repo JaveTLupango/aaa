@@ -19,9 +19,9 @@ class Insert_Controller
                 $dttime = $now->format('Y-m-d H:i:s');
                 $id = round($dt).round($dt1).round($dt2).round(microtime(true));
 
-				$sql = "INSERT INTO users (userid, username, password, passkey, name, usertype, status, upline, dtjoin, email, duration, label)
-	                           VALUES ('$id', '$username', '$password', '$passkey', '$name', 'client', 'active', 'admin', '$dttime', '$email', '7200', 'trial')";
-	                                $conn->exec($sql);	
+				$sql = "INSERT INTO users (userid, username, password, passhash, name, usertype, status, refid, tdt, email)
+	                           VALUES ('$id', '$username', '$password', '$passkey', '$name', '1', '', '0', '$dttime', '$email')";
+	                                $conn->exec($sql);
 				return "success";
 		}
 		catch (Exception $e)
@@ -113,7 +113,6 @@ class Insert_Controller
 		}
 	}
 
-
 	/**
 	* username validation function controller
 	*/
@@ -136,5 +135,4 @@ class Insert_Controller
 			return $e->getMessage();
 		}
 	}
-
 }

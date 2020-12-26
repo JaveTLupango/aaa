@@ -1,6 +1,6 @@
 <?php
 
-$s_credit = $c_Select->fn_SingleResponse($conn, "SELECT * FROM users WHERE username=?", "voucher", $_SESSION['username']);
+$s_credit = "";//$c_Select->fn_SingleResponse($conn, "SELECT * FROM users WHERE username=?", "voucher", $_SESSION['username']);
 
 echo '
  <!-- Navbar -->
