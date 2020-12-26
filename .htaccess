@@ -1,0 +1,5 @@
+RewriteEngine On
+
+RewriteRule ^auth/([a-z0-9]+) index.php?id=$1
+RewriteRule ^home/([a-z0-9]+) validate.php?id=$1
+RewriteRule ^home validate.php?id=home
