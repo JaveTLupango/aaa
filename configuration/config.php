@@ -1,6 +1,6 @@
 <?php
 $con_host ="localhost";
-$con_dbname = "aadt";
+$con_dbname = "inv_pos";
 $con_username = "root";
 $con_password = "";
 $system_Email = "support@adminpanel.javelupango.com";
