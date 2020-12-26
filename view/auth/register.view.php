@@ -42,6 +42,13 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
+                                    <label for="email">Email Address</label>
+                                    <input id="username" type="username" class="form-control" name="username" tabindex="1" required autofocus>
+                                    <div class="invalid-feedback">
+                                        Please fill in your username
+                                    </div>
+                                </div>
+                                <div class="form-group">
                                     <label for="email">Username</label>
                                     <input id="username" type="username" class="form-control" name="username" tabindex="1" required autofocus>
                                     <div class="invalid-feedback">
